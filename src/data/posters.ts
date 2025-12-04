@@ -220,7 +220,7 @@ export const posters: Poster[] = [
     title: "Spinal and Cranial Nerves – Neuro Map",
     description:
       "Detailed chart of cranial nerves & spinal nerve roots. Includes exit locations and functional areas.",
-    image: "/posters/spinal-and-cranial-nerves.jpg",
+    image: "/posters/spinal-and-cranial-nerve.jpg",
     category: "Neurology",
     sizes: ["A3", "A2", "A1"],
     quality:
