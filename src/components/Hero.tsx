@@ -9,9 +9,9 @@ export default function Hero() {
         
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug tracking-tight mb-6 mx-auto max-w-3xl">
   Professional{" "}
-  <span className="font-caveat gradient-text whitespace-nowrap">
+  <span className="font-caveat gradient-text whitespace-nowrap mr-6">
     Medical & Clinical
-  </span>{"  "}
+  </span>
   Posters
 </h1>
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
