@@ -13,11 +13,7 @@ export interface Poster {
     large: number;
   };
 }
-export const categories = [
-  "Anatomy",
-  "Neurology",
-  "Orthopedics"
-];
+
 export const posters: Poster[] = [
   // ===================== ANATOMY =====================
 
@@ -220,7 +216,7 @@ export const posters: Poster[] = [
     title: "Spinal and Cranial Nerves – Neuro Map",
     description:
       "Detailed chart of cranial nerves & spinal nerve roots. Includes exit locations and functional areas.",
-    image: "/posters/spinal-and-cranial-nerve.jpg",
+    image: "/posters/spinal-and-cranial-nerves.jpg",
     category: "Neurology",
     sizes: ["A3", "A2", "A1"],
     quality:
@@ -380,5 +376,5 @@ export const posters: Poster[] = [
 ];
 
 export const categories: string[] = Array.from(
-  new Set(posters.map((poster) => poster.category))
+  new Set(posters.map((p) => p.category))
 );
