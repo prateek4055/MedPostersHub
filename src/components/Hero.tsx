@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="bg-background pt-20 pb-14">
       <div className="container mx-auto px-4 text-center">
         
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug tracking-tight mb-6 mx-auto max-w-3xl">
+        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug tracking-tight mb-6 mx-auto max-w-3xl">
   Professional{" "}
   <span className="font-caveat gradient-text whitespace-nowrap">
     Medical & Clinical
