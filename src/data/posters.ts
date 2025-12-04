@@ -374,6 +374,7 @@ export const posters: Poster[] = [
     price: { small: 299, medium: 399, large: 499 },
   }
 ];
+
 export const categories: string[] = Array.from(
   new Set(posters.map((p) => p.category))
 );
