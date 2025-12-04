@@ -1,4 +1,4 @@
-import { categories } from "@/data/posters";
+import { categories } from "../data/posters";
 
 interface CategoryFilterProps {
   selected: string;
