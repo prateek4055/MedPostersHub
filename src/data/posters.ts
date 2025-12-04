@@ -13,7 +13,11 @@ export interface Poster {
     large: number;
   };
 }
-
+export const categories = [
+  "Anatomy",
+  "Neurology",
+  "Orthopedics"
+];
 export const posters: Poster[] = [
   // ===================== ANATOMY =====================
 
