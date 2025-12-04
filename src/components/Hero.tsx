@@ -1,84 +1,71 @@
 // src/components/Hero.tsx
 import React from "react";
-import Link from "next/link"; // remove if not using Next.js
 
 export default function Hero() {
   return (
-    <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <section className="bg-white py-16">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16">
+        <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+          {/* Left: heading + CTA */}
+          <div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+              Professional{" "}
+              <span className="font-caveat gradient-text">Medical</span>{" "}
+              &{" "}
+              <span className="font-caveat gradient-text">Clinical</span>{" "}
+              Posters
+            </h1>
 
-          {/* ---------------- TEXT AREA ---------------- */}
-          <div className="space-y-6">
-
-            {/* ======= MAIN HEADING WITH GRADIENT WORDS ======= */}
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-  Professional{" "}
-  <span className="font-caveat gradient-text">Medical</span>{" "}
-  &{" "}
-  <span className="font-caveat gradient-text">Clinical</span>{" "}
-  Posters
-</h1>
-
-            {/* ======= SUBHEADING ======= */}
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
-              High-precision anatomical and clinical visuals designed for healthcare environments.
-              Printed on premium 250gsm matte stock with UV-resistant inks — ideal for consultation
-              rooms, teaching spaces and patient education.
+            <p className="text-muted text-lg md:text-xl mb-6 max-w-xl">
+              High-resolution, clinically accurate anatomical and educational posters for clinics, hospitals and teaching institutions — designed for medical professionals, not children.
             </p>
 
-            {/* ======= BUTTONS ======= */}
-            <div className="flex flex-wrap gap-4 mt-4">
-              <Link href="/catalog" legacyBehavior>
-                <a className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm hover:brightness-95">
-                  Browse Catalog
-                </a>
-              </Link>
+            <div className="flex flex-wrap gap-3">
+              {/* use a simple anchor so Vite/rollup doesn't need next/link */}
+              <a
+                href="/catalog"
+                className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium shadow hover:opacity-95"
+                aria-label="Browse catalog"
+              >
+                Browse catalogue
+              </a>
 
-              <Link href="/contact" legacyBehavior>
-                <a className="inline-flex items-center justify-center rounded-md border border-gray-200 px-5 py-3 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-                  Bulk & Institutional Orders
-                </a>
-              </Link>
+              <a
+                href="/contact"
+                className="inline-block border border-primary px-6 py-3 rounded-lg font-medium text-primary hover:bg-primary/5"
+                aria-label="Contact us"
+              >
+                Contact us
+              </a>
             </div>
 
-            {/* ======= TRUST LINE ======= */}
-            <div className="mt-6 text-sm text-gray-500">
-              <strong className="text-gray-700">Quality</strong> — 250gsm matte stock · UV-resistant inks · Clinic-grade printing.
-            </div>
-          </div>
+            <div className="mt-8 flex flex-wrap gap-6">
+              <div className="bg-surface p-4 rounded-lg text-center min-w-[120px]">
+                <div className="text-2xl font-extrabold text-primary">500+</div>
+                <div className="text-sm text-muted">Clinics served</div>
+              </div>
 
-          {/* ---------------- HERO IMAGE SECTION ---------------- */}
-          <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-md bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm">
-              <img
-                src="/hero/medical-poster-preview.jpg"
-                alt="Professional medical posters preview"
-                className="w-full h-auto rounded"
-              />
+              <div className="bg-surface p-4 rounded-lg text-center min-w-[120px]">
+                <div className="text-2xl font-extrabold text-primary">50+</div>
+                <div className="text-sm text-muted">Poster designs</div>
+              </div>
 
-              <div className="mt-4 text-xs text-gray-500">
-                Example poster preview — available in A3 • A2 • A1. Custom sizes also available.
+              <div className="bg-surface p-4 rounded-lg text-center min-w-[120px]">
+                <div className="text-2xl font-extrabold text-primary">4.9★</div>
+                <div className="text-sm text-muted">Customer rating</div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* ---------------- FEATURES ROW ---------------- */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="bg-white border border-gray-100 rounded-lg p-4 text-center">
-            <div className="text-lg font-semibold text-gray-900">Premium Printing</div>
-            <div className="text-sm text-gray-600 mt-1">Clinic-grade, long-lasting quality</div>
-          </div>
-
-          <div className="bg-white border border-gray-100 rounded-lg p-4 text-center">
-            <div className="text-lg font-semibold text-gray-900">Educational Accuracy</div>
-            <div className="text-sm text-gray-600 mt-1">Clear clinical diagrams for professionals</div>
-          </div>
-
-          <div className="bg-white border border-gray-100 rounded-lg p-4 text-center">
-            <div className="text-lg font-semibold text-gray-900">Institutional Orders</div>
-            <div className="text-sm text-gray-600 mt-1">Bulk pricing & customization available</div>
+          {/* Right: example poster / image */}
+          <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-md">
+              <img
+                src="/hero-poster.jpg"
+                alt="Sample anatomical poster"
+                className="rounded-xl shadow-lg object-cover w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </div>
