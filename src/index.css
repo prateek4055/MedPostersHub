@@ -115,13 +115,13 @@
   }
 
   .font-caveat {
-    font-family: "Caveat", cursive;
-    line-height: 1.4;
-    display: inline-block;
-    padding-top: 0.15em;
-    padding-bottom: 0.05em;
-  }
-
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 0.1em 0.15em; 
+}
   .gradient-text {
     background: linear-gradient(90deg, #4f46e5, #e11d48, #f59e0b);
     -webkit-background-clip: text;
