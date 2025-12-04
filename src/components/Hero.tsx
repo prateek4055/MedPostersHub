@@ -12,18 +12,13 @@ export default function Hero() {
           <div className="space-y-6">
 
             {/* ======= MAIN HEADING WITH GRADIENT WORDS ======= */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
-
-              Professional{" "}
-              <span className="font-caveat text-5xl bg-gradient-to-r from-[#0B4DB0] via-[#3AAFFF] to-[#12D8FA] bg-clip-text text-transparent">
-                Medical
-              </span>{" "}
-              Posters &{" "}
-              <span className="font-caveat text-5xl bg-gradient-to-r from-[#0B4DB0] via-[#3AAFFF] to-[#12D8FA] bg-clip-text text-transparent">
-                Clinical
-              </span>{" "}
-              Reference Charts
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+  Professional{" "}
+  <span className="font-caveat gradient-text">Medical</span>{" "}
+  &{" "}
+  <span className="font-caveat gradient-text">Clinical</span>{" "}
+  Posters
+</h1>
 
             {/* ======= SUBHEADING ======= */}
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
