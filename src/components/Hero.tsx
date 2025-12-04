@@ -1,33 +1,92 @@
-import { ArrowDown } from "lucide-react";
+// src/components/Hero.tsx
+import React from "react";
+import Link from "next/link"; // remove if not using Next.js
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 md:py-32">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%230066cc%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
-      
-      <div className="container relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl animate-slide-up">
-            Professional Medical & 
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Physiotherapy </span>
-            Posters
-          </h1>
-          <p className="mb-8 text-lg text-muted-foreground md:text-xl animate-slide-up" style={{ animationDelay: "100ms" }}>
-            High-quality anatomical charts and educational posters for clinics, 
-            healthcare facilities, and educational institutions.
-          </p>
-          <a
-            href="#catalog"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl animate-slide-up"
-            style={{ animationDelay: "200ms" }}
-          >
-            Browse Collection
-            <ArrowDown className="h-4 w-4" />
-          </a>
+    <section className="bg-white">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+          {/* ---------------- TEXT AREA ---------------- */}
+          <div className="space-y-6">
+
+            {/* ======= MAIN HEADING WITH GRADIENT WORDS ======= */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
+
+              Professional{" "}
+              <span className="font-caveat text-5xl bg-gradient-to-r from-[#0B4DB0] via-[#3AAFFF] to-[#12D8FA] bg-clip-text text-transparent">
+                Medical
+              </span>{" "}
+              Posters &{" "}
+              <span className="font-caveat text-5xl bg-gradient-to-r from-[#0B4DB0] via-[#3AAFFF] to-[#12D8FA] bg-clip-text text-transparent">
+                Clinical
+              </span>{" "}
+              Reference Charts
+            </h1>
+
+            {/* ======= SUBHEADING ======= */}
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
+              High-precision anatomical and clinical visuals designed for healthcare environments.
+              Printed on premium 250gsm matte stock with UV-resistant inks — ideal for consultation
+              rooms, teaching spaces and patient education.
+            </p>
+
+            {/* ======= BUTTONS ======= */}
+            <div className="flex flex-wrap gap-4 mt-4">
+              <Link href="/catalog" legacyBehavior>
+                <a className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm hover:brightness-95">
+                  Browse Catalog
+                </a>
+              </Link>
+
+              <Link href="/contact" legacyBehavior>
+                <a className="inline-flex items-center justify-center rounded-md border border-gray-200 px-5 py-3 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                  Bulk & Institutional Orders
+                </a>
+              </Link>
+            </div>
+
+            {/* ======= TRUST LINE ======= */}
+            <div className="mt-6 text-sm text-gray-500">
+              <strong className="text-gray-700">Quality</strong> — 250gsm matte stock · UV-resistant inks · Clinic-grade printing.
+            </div>
+          </div>
+
+          {/* ---------------- HERO IMAGE SECTION ---------------- */}
+          <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-md bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm">
+              <img
+                src="/hero/medical-poster-preview.jpg"
+                alt="Professional medical posters preview"
+                className="w-full h-auto rounded"
+              />
+
+              <div className="mt-4 text-xs text-gray-500">
+                Example poster preview — available in A3 • A2 • A1. Custom sizes also available.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ---------------- FEATURES ROW ---------------- */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="bg-white border border-gray-100 rounded-lg p-4 text-center">
+            <div className="text-lg font-semibold text-gray-900">Premium Printing</div>
+            <div className="text-sm text-gray-600 mt-1">Clinic-grade, long-lasting quality</div>
+          </div>
+
+          <div className="bg-white border border-gray-100 rounded-lg p-4 text-center">
+            <div className="text-lg font-semibold text-gray-900">Educational Accuracy</div>
+            <div className="text-sm text-gray-600 mt-1">Clear clinical diagrams for professionals</div>
+          </div>
+
+          <div className="bg-white border border-gray-100 rounded-lg p-4 text-center">
+            <div className="text-lg font-semibold text-gray-900">Institutional Orders</div>
+            <div className="text-sm text-gray-600 mt-1">Bulk pricing & customization available</div>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
