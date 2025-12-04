@@ -1,26 +1,44 @@
 // src/components/CategoryFilter.tsx
 import React from "react";
-import { posters } from "../data/posters"; // <-- relative path from components -> data
+import { posters } from "../data/posters"; // relative import from components -> data
 
-const categories = Array.from(new Set(posters.map((p) => p.category)));
+// compute categories from posters so we don't rely on an exported `categories` symbol
+const categories: string[] = Array.from(new Set(posters.map((p) => p.category))).sort();
 
 interface CategoryFilterProps {
-  selectedCategory: string;
-  onSelectCategory: (category: string) => void;
+  selected: string;
+  onSelect: (category: string) => void;
 }
 
-const CategoryFilter: React.FC<CategoryFilterProps> = ({
-  selectedCategory,
-  onSelectCategory,
-}) => {
+const CategoryFilter: React.FC<CategoryFilterProps> = ({ selected, onSelect }) => {
   return (
-    <div>
-      <select value={selectedCategory} onChange={(e) => onSelectCategory(e.target.value)}>
-        <option value="">All Categories</option>
-        {categories.map((cat) => (
-          <option key={cat} value={cat}>{cat}</option>
-        ))}
-      </select>
+    <div className="flex flex-wrap justify-center gap-2">
+      {/* optional "All" button */}
+      <button
+        key="all"
+        onClick={() => onSelect("")}
+        className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
+          selected === ""
+            ? "bg-primary text-primary-foreground shadow-md"
+            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+        }`}
+      >
+        All
+      </button>
+
+      {categories.map((category) => (
+        <button
+          key={category}
+          onClick={() => onSelect(category)}
+          className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
+            selected === category
+              ? "bg-primary text-primary-foreground shadow-md"
+              : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+          }`}
+        >
+          {category}
+        </button>
+      ))}
     </div>
   );
 };
