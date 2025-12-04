@@ -11,7 +11,7 @@ export default function Hero() {
   Professional{" "}
   <span className="font-caveat gradient-text whitespace-nowrap">
     Medical & Clinical
-  </span>{" "}
+  </span>{"  "}
   Posters
 </h1>
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
