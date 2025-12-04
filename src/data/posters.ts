@@ -1,109 +1,376 @@
+export interface Poster {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string; 
+  sizes: string[];
+  quality: string;
+  comboSuggestions: string[];
+  price: {
+    small: number;
+    medium: number;
+    large: number;
+  };
+}
+
 export const posters: Poster[] = [
+  // ===================== ANATOMY =====================
+
   {
     id: "1",
-    title: "Human Muscular System",
+    title: "Muscular System – Full Body Anatomy",
     description:
-      "Hand-drawn physiotherapy style muscular system chart showing anterior and posterior muscle groups. Perfect for BPT students and clinic walls.",
+      "High-resolution poster of the complete muscular system, showing major superficial muscles with clear labeling. Ideal for physiotherapy clinics, gyms and medical students.",
     image: "/posters/muscular-system.jpg",
     category: "Anatomy",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "Premium 250–300 GSM art paper with high-quality color printing, suitable for framing in clinics and classrooms.",
-    comboSuggestions: ["Human Skeletal System", "Trigger Points & Pain Referral"],
+    sizes: ["A3", "A2", "A1"],
+    quality: "Premium 250gsm matte finish with UV-resistant inks.",
+    comboSuggestions: [
+      "Skeletal System – Bones of the Human Body",
+      "Ligaments of the Joints",
+      "Respiratory System – Lungs & Airways"
+    ],
     price: { small: 299, medium: 399, large: 499 },
   },
+
   {
     id: "2",
-    title: "Human Skeletal System",
+    title: "Skeletal System – Bones of the Human Body",
     description:
-      "Clean skeletal system illustration for ortho and physiotherapy education. All major bones labeled and clinically relevant.",
+      "Complete skeletal reference featuring labelled bones and structural relationships. Perfect visual aid for clinics and classrooms.",
     image: "/posters/skeletal-system.jpg",
     category: "Anatomy",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "Premium 250–300 GSM art paper with fade-resistant inks, ideal for long-term clinic and classroom display.",
-    comboSuggestions: ["Human Muscular System", "Spinal Column & Vertebrae"],
+    sizes: ["A3", "A2", "A1"],
+    quality: "Printed on thick 250gsm matte paper for durability.",
+    comboSuggestions: [
+      "Muscular System – Full Body Anatomy",
+      "Anatomy of the Spine",
+      "Ligaments of the Joints"
+    ],
     price: { small: 299, medium: 399, large: 499 },
   },
+
   {
     id: "3",
-    title: "Spinal Column & Vertebrae",
+    title: "Nervous System – Central & Peripheral",
     description:
-      "Detailed spinal anatomy showing cervical, thoracic, lumbar and sacral regions. Ideal for physiotherapy, chiropractic and ortho OPD.",
-    image: "/posters/spine.jpg",
-    category: "Physiotherapy",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "Thick 250–300 GSM art paper with sharp spinal detailing, perfect for spinal rehab and ortho clinics.",
-    comboSuggestions: ["Posture Correction Guide", "Back Pain Points"],
-    price: { small: 199, medium: 299, large: 399 },
-  },
-  {
-    id: "4",
-    title: "Knee Joint Anatomy",
-    description:
-      "Cross-sectional knee joint poster with ACL, PCL, menisci and ligaments. The best quick reference for sports physio and ortho.",
-    image: "/posters/knee.jpg",
-    category: "Orthopedics",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "Premium 250–300 GSM laminated art paper designed for daily use in ortho and sports physio clinics.",
-    comboSuggestions: ["Hip Joint Anatomy", "Shoulder Complex Anatomy"],
-    price: { small: 249, medium: 349, large: 449 },
-  },
-  {
-    id: "5",
-    title: "Trigger Points & Pain Referral",
-    description:
-      "Detailed trigger point mapping with major pain patterns. A must-have for dry needling, acupuncture and manual therapy.",
-    image: "/posters/trigger-points.jpg",
-    category: "Physiotherapy",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "High-quality 250–300 GSM art paper with clear trigger point markings for manual therapy and rehab centers.",
-    comboSuggestions: ["Myofascial Meridians", "Stretching Exercises Guide"],
-    price: { small: 299, medium: 399, large: 499 },
-  },
-  {
-    id: "6",
-    title: "Shoulder Complex Anatomy",
-    description:
-      "Anatomy of the shoulder joint with rotator cuff, labrum, bursae and capsule layers. Ideal for gym physios and ortho OPDs.",
-    image: "/posters/shoulder.jpg",
-    category: "Orthopedics",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "Premium 250–300 GSM art paper with crisp shoulder joint detailing, perfect for gyms and ortho OPDs.",
-    comboSuggestions: ["Knee Joint Anatomy", "Elbow & Forearm Anatomy"],
-    price: { small: 199, medium: 299, large: 399 },
-  },
-  {
-    id: "7",
-    title: "Nervous System Overview",
-    description:
-      "Clear breakdown of CNS & PNS with spinal nerves and brain regions. Excellent for neuro physio and student learning.",
+      "CNS + PNS overview including brain, spinal cord and major nerve pathways. Excellent educational tool for neuro departments.",
     image: "/posters/nervous-system.jpg",
     category: "Anatomy",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
-    quality:
-      "Premium 250–300 GSM art paper with clear nervous system labeling for neuro physio and teaching walls.",
-    comboSuggestions: ["Dermatome Chart", "Brain Anatomy"],
+    sizes: ["A3", "A2", "A1"],
+    quality: "Clinical-grade printing ideal for neuro OPD.",
+    comboSuggestions: [
+      "Spinal and Cranial Nerves Map",
+      "Dermatomes – Sensory Supply",
+      "Anatomy of the Brain"
+    ],
     price: { small: 299, medium: 399, large: 499 },
   },
+
+  {
+    id: "4",
+    title: "Circulatory System – Arteries & Veins",
+    description:
+      "Clean anatomical diagram of major arterial and venous pathways with detailed systemic circulation.",
+    image: "/posters/circulatory-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality: "Laminated matte print suitable for OPD walls.",
+    comboSuggestions: [
+      "Anatomy of the Heart",
+      "Respiratory System",
+      "Digestive System"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "5",
+    title: "Digestive System – GI Tract Anatomy",
+    description:
+      "Comprehensive illustration of the digestive system showing major organs like stomach, intestines, liver and pancreas.",
+    image: "/posters/digestive-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "High-quality 250gsm poster designed for educational and patient counselling use.",
+    comboSuggestions: [
+      "Endocrine System",
+      "Circulatory System",
+      "Pregnancy and Birth"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "6",
+    title: "Endocrine System – Hormone Glands",
+    description:
+      "Detailed endocrine system showing pituitary, thyroid, adrenal glands, pancreas and reproductive glands.",
+    image: "/posters/endocrine-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Premium matte finish poster for metabolic & hormonal rehab setups.",
+    comboSuggestions: [
+      "Female Reproductive System",
+      "Male Reproductive System",
+      "Anatomy of the Brain"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "7",
+    title: "Respiratory System – Lungs & Airways",
+    description:
+      "Educational poster showing lungs, trachea, alveoli and bronchial tree. Great visual for cardio-pulmonary rehab.",
+    image: "/posters/respiratory-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality: "Matte UV-resistant print for long-term display.",
+    comboSuggestions: [
+      "Circulatory System – Arteries & Veins",
+      "Anatomy of the Heart",
+      "Muscular System"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
   {
     id: "8",
-    title: "Stretching Exercises Guide",
+    title: "Lymphatic System – Vessels & Nodes",
     description:
-      "Full-body stretching reference with rehab-safe positions. Ideal for gym, OPD and patient counseling.",
-    image: "/posters/stretching.jpg",
-    category: "Exercise",
-    sizes: ["A3 (29.7 x 42 cm)", "A2 (42 x 59.4 cm)", "A1 (59.4 x 84.1 cm)"],
+      "Lymph nodes, drainage pathways and immune route mapping. Useful for oncology rehab and edema management.",
+    image: "/posters/lymphatic-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
     quality:
-      "Durable 250–300 GSM art paper, patient-friendly layout, suitable for gyms, OPDs and rehab centers.",
-    comboSuggestions: ["Resistance Band Exercises", "Core Strengthening"],
-    price: { small: 199, medium: 299, large: 399 },
+      "Printed on thick matte sheet suitable for OPD use.",
+    comboSuggestions: [
+      "Circulatory System",
+      "Digestive System",
+      "Endocrine System"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
   },
+
+  {
+    id: "9",
+    title: "Male Reproductive System – Anatomical Chart",
+    description:
+      "Detailed illustration of male reproductive organs including prostate, testes, vas deferens and glands.",
+    image: "/posters/male-reproductive-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Great for reproductive clinics and student labs.",
+    comboSuggestions: [
+      "Female Reproductive System",
+      "Endocrine System",
+      "Pregnancy and Birth"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "10",
+    title: "Female Reproductive System – Anatomical Chart",
+    description:
+      "Poster showing uterus, ovaries, ligaments and pelvic relations. Ideal for OBG and women’s health physio.",
+    image: "/posters/female-reproductive-system.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Clinic-grade matte print suitable for consultation rooms.",
+    comboSuggestions: [
+      "Pregnancy and Birth",
+      "Endocrine System",
+      "Anatomy of the Spine"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "11",
+    title: "Pregnancy and Birth – Obstetrics Reference",
+    description:
+      "Stages of pregnancy, fetal development and anatomical changes during childbirth. Excellent for maternity OPDs.",
+    image: "/posters/pregnancy-and-birth.jpg",
+    category: "Anatomy",
+    sizes: ["A3", "A2", "A1"],
+    quality: "Printed on premium matte 250gsm sheet.",
+    comboSuggestions: [
+      "Female Reproductive System",
+      "Endocrine System",
+      "Anatomy of the Spine"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  // ===================== NEUROLOGY =====================
+
+  {
+    id: "12",
+    title: "Spinal and Cranial Nerves – Neuro Map",
+    description:
+      "Detailed chart of cranial nerves & spinal nerve roots. Includes exit locations and functional areas.",
+    image: "/posters/spinal-and-cranial-nerves.jpg",
+    category: "Neurology",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Neuro physiotherapy essential for assessment and patient explanation.",
+    comboSuggestions: [
+      "Nervous System",
+      "Dermatomes",
+      "Anatomy of the Brain"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "13",
+    title: "Dermatomes – Sensory Nerve Supply",
+    description:
+      "Dermatomal distribution map showing sensory innervation by spinal segments. Required for neuro exams.",
+    image: "/posters/dermatomes.jpg",
+    category: "Neurology",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Highly recommended for neuro OPDs and spine clinics.",
+    comboSuggestions: [
+      "Spinal and Cranial Nerves",
+      "Anatomy of the Brain",
+      "Disorders of the Spine"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "14",
+    title: "Anatomy of the Brain – Neuro Physio Edition",
+    description:
+      "Labelled diagram showing brain lobes, cortical areas and vital neuro structures.",
+    image: "/posters/anatomy-of-the-brain.jpg",
+    category: "Neurology",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Ideal for stroke rehabilitation centres and neuro teaching.",
+    comboSuggestions: [
+      "Nervous System",
+      "Dermatomes",
+      "Spinal and Cranial Nerves"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  // ===================== ORTHOPEDICS =====================
+
+  {
+    id: "15",
+    title: "Ligaments of the Joints – Ortho Reference",
+    description:
+      "Poster showing ligaments of major joints including knee, shoulder, hip and ankle.",
+    image: "/posters/ligaments-of-the-joints.jpg",
+    category: "Orthopedics",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Excellent for physio, ortho counselling and injury explanation.",
+    comboSuggestions: [
+      "Anatomy and Injuries of the Knee",
+      "Anatomy and Injuries of the Shoulder",
+      "Anatomy of the Spine"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "16",
+    title: "Disorders of the Spine – Clinical Conditions",
+    description:
+      "Depicts disc prolapse, stenosis, scoliosis and posture faults with clear visuals.",
+    image: "/posters/disorders-of-the-spine.jpg",
+    category: "Orthopedics",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Designed for pain clinics, ortho OPDs and rehab counselling.",
+    comboSuggestions: [
+      "Anatomy of the Spine",
+      "Dermatomes",
+      "Anatomy and Injuries of the Hip"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "17",
+    title: "Anatomy of the Spine – Vertebral Column",
+    description:
+      "Spinal regions C1–L5 with discs, vertebrae and clinical landmarks.",
+    image: "/posters/anatomy-of-the-spine.jpg",
+    category: "Orthopedics",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Best seller for ortho & neuro rehab clinics.",
+    comboSuggestions: [
+      "Disorders of the Spine",
+      "Ligaments of the Joints",
+      "Anatomy and Injuries of the Hip"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "18",
+    title: "Anatomy and Injuries of the Shoulder",
+    description:
+      "Shoulder joint with rotator cuff, ligaments and common injury types like impingement and tears.",
+    image: "/posters/shoulder-anatomy-injuries.jpg",
+    category: "Orthopedics",
+    sizes: ["A3", "A2", "A1"],
+    quality: "Perfect for sports rehab and ortho OPD counselling.",
+    comboSuggestions: [
+      "Ligaments of the Joints",
+      "Anatomy and Injuries of the Knee",
+      "Anatomy and Injuries of the Hip"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "19",
+    title: "Anatomy and Injuries of the Knee",
+    description:
+      "ACL, PCL, MCL, LCL and meniscus injuries with anatomical references. A must for ortho centres.",
+    image: "/posters/knee-anatomy-injuries.jpg",
+    category: "Orthopedics",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Highly useful for sports physio and post-surgical rehab.",
+    comboSuggestions: [
+      "Ligaments of the Joints",
+      "Anatomy and Injuries of the Shoulder",
+      "Anatomy and Injuries of the Hip"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  },
+
+  {
+    id: "20",
+    title: "Anatomy and Injuries of the Hip",
+    description:
+      "Hip joint anatomy showing labrum, capsule and common injuries like impingement and bursitis.",
+    image: "/posters/hip-anatomy-injuries.jpg",
+    category: "Orthopedics",
+    sizes: ["A3", "A2", "A1"],
+    quality:
+      "Recommended for ortho OPDs, rehab and sports clinics.",
+    comboSuggestions: [
+      "Ligaments of the Joints",
+      "Anatomy and Injuries of the Knee",
+      "Anatomy of the Spine"
+    ],
+    price: { small: 299, medium: 399, large: 499 },
+  }
 ];
-export const categories = Array.from(
-  new Set(posters.map((poster) => poster.category))
-);
