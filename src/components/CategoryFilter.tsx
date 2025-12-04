@@ -1,26 +1,32 @@
-import { categories } from "../data/posters";
+// src/components/CategoryFilter.tsx
+import React from "react";
+import { posters } from "../data/posters"; // relative path from components -> data
+
+const categories = Array.from(new Set(posters.map((p) => p.category)));
 
 interface CategoryFilterProps {
-  selected: string;
-  onSelect: (category: string) => void;
+  selectedCategory: string;
+  onSelectCategory: (category: string) => void;
 }
 
-const CategoryFilter = ({ selected, onSelect }: CategoryFilterProps) => {
+const CategoryFilter: React.FC<CategoryFilterProps> = ({
+  selectedCategory,
+  onSelectCategory,
+}) => {
   return (
-    <div className="flex flex-wrap justify-center gap-2">
-      {categories.map((category) => (
-        <button
-          key={category}
-          onClick={() => onSelect(category)}
-          className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
-            selected === category
-              ? "bg-primary text-primary-foreground shadow-md"
-              : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-          }`}
-        >
-          {category}
-        </button>
-      ))}
+    <div className="w-full">
+      <select
+        className="px-3 py-2 border rounded w-full"
+        value={selectedCategory}
+        onChange={(e) => onSelectCategory(e.target.value)}
+      >
+        <option value="">All Categories</option>
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };
