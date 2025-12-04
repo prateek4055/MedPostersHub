@@ -1,6 +1,6 @@
 // src/components/CategoryFilter.tsx
 import React from "react";
-import { posters } from "../data/posters"; // relative path from components -> data
+import { posters } from "../data/posters"; // <-- relative path from components -> data
 
 const categories = Array.from(new Set(posters.map((p) => p.category)));
 
@@ -14,17 +14,11 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
   onSelectCategory,
 }) => {
   return (
-    <div className="w-full">
-      <select
-        className="px-3 py-2 border rounded w-full"
-        value={selectedCategory}
-        onChange={(e) => onSelectCategory(e.target.value)}
-      >
+    <div>
+      <select value={selectedCategory} onChange={(e) => onSelectCategory(e.target.value)}>
         <option value="">All Categories</option>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {category}
-          </option>
+        {categories.map((cat) => (
+          <option key={cat} value={cat}>{cat}</option>
         ))}
       </select>
     </div>
