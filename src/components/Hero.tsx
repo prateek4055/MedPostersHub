@@ -8,12 +8,18 @@ const Hero: React.FC = () => {
         {/* Heading */}
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug tracking-tight mb-6">
-            <span>Professional </span>
-            <span className="font-caveat gradient-text whitespace-nowrap px-1 mr-6">
-              Medical & Clinical
-            </span>
-            <span>Posters</span>
-          </h1>
+  <span>Professional</span>{" "}
+
+  <span className="font-caveat gradient-text mr-2">
+    Medical
+  </span>
+
+  <span className="font-caveat gradient-text mr-6">
+    Clinical
+  </span>
+
+  <span>Posters</span>
+</h1>
 
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             High-resolution, clinically accurate anatomical and educational posters
