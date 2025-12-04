@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -123,9 +123,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #0ea5e9, #7c3aed, #f97316);
+  background: linear-gradient(90deg, #4f46e5, #e11d48, #f59e0b);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
