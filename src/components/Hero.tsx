@@ -24,18 +24,18 @@ const Hero: React.FC = () => {
         </p>
 
         {/* 🔥 Camera-roll slideshow inside hero */}
-        <div className="mt-8 overflow-hidden">
-          <div className="flex gap-4 animate-scroll whitespace-nowrap">
-            {strip.map((poster, index) => (
-              <img
-                key={index}
-                src={poster.image}
-                alt={poster.title}
-                className="h-24 sm:h-28 md:h-32 w-auto rounded-lg shadow-md object-cover"
-              />
-            ))}
-          </div>
-        </div>
+<div className="mt-8 overflow-hidden">
+  <div className="flex gap-4 animate-scroll whitespace-nowrap">
+    {strip.map((poster, index) => (
+      <img
+        key={index}
+        src={poster.image}
+        alt={poster.title}
+        className="h-24 sm:h-28 md:h-32 w-auto rounded-lg shadow-md object-cover"
+      />
+    ))}
+  </div>
+</div>
 
         {/* CTA button */}
         <div className="mt-8 flex justify-center">
