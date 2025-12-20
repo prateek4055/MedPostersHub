@@ -78,9 +78,9 @@ const Index = () => {
           <li>Trigger Points & Pain Referral</li>
         </ul>
         <p className="mt-4 text-sm text-muted-foreground line-through">
-          MRP: ₹1,995
+          MRP: ₹1,499
         </p>
-        <p className="text-xl font-bold text-primary">Combo Price: ₹1,499</p>
+        <p className="text-xl font-bold text-primary">Combo Price: ₹1,199</p>
         <button
           className="mt-4 w-full rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600 transition"
           onClick={() =>
@@ -109,9 +109,9 @@ const Index = () => {
           <li>Stretching Exercises Guide</li>
         </ul>
         <p className="mt-4 text-sm text-muted-foreground line-through">
-          MRP: ₹1,596
+          MRP: ₹1,197
         </p>
-        <p className="text-xl font-bold text-primary">Combo Price: ₹1,199</p>
+        <p className="text-xl font-bold text-primary">Combo Price: ₹999</p>
         <button
           className="mt-4 w-full rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600 transition"
           onClick={() =>
@@ -139,9 +139,9 @@ const Index = () => {
           <li>Trigger Points & Pain Referral</li>
         </ul>
         <p className="mt-4 text-sm text-muted-foreground line-through">
-          MRP: ₹1,197
+          MRP: ₹897
         </p>
-        <p className="text-xl font-bold text-primary">Combo Price: ₹899</p>
+        <p className="text-xl font-bold text-primary">Combo Price: ₹799</p>
         <button
           className="mt-4 w-full rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600 transition"
           onClick={() =>
