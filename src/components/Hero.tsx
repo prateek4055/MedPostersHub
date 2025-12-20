@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug tracking-tight">
           <span>Professional </span>
-          <span className="font-caveat gradient-text mr-2">Medical</span>
+          <span className="font-caveat gradient-text mr-2">Medical and</span>
           <span className="font-caveat gradient-text mr-2">Clinical</span>
           <span>Posters</span>
         </h1>
