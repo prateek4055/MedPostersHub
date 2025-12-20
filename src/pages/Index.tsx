@@ -213,19 +213,6 @@ const Index = () => {
                 anatomical details and printed on premium materials to ensure durability 
                 and vibrant colors.
               </p>
-              <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-xl bg-card p-6 shadow-card">
-                  <div className="mb-3 text-3xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">Clinics Served</div>
-                </div>
-                <div className="rounded-xl bg-card p-6 shadow-card">
-                  <div className="mb-3 text-3xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Poster Designs</div>
-                </div>
-                <div className="rounded-xl bg-card p-6 shadow-card">
-                  <div className="mb-3 text-3xl font-bold text-primary">4.9★</div>
-                  <div className="text-sm text-muted-foreground">Customer Rating</div>
-                </div>
               </div>
             </div>
           </div>
